@@ -4,7 +4,7 @@ import { listAsync } from "./expo";
 import { Command } from 'commander';
 
 async function main(url?: string) {
-    const results = await listAsync("../rvcycle/");
+    const results = await listAsync(".");
     if (results.length > 0) {
         if (url) {
             const urlMatches = results.filter(wh => wh.url === url);
